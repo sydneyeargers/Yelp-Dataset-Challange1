@@ -28,7 +28,7 @@ def getConn():
 
 def insert2BusinessTable():
     # reading the JSON file
-    with open('/Users/sydneyyeargers/Downloads/Yelp-CptS451/yelp_business.JSON', 'r') as f:
+    with open('yelp_business.JSON', 'r') as f:
         line = f.readline()
         count_line = 0
         innerconn = getConn()
@@ -128,7 +128,7 @@ def writeHours(business_id, weekday, hours, localconn):
 
 
 def insert2UsersTable():
-    with open('/Users/sydneyyeargers/Downloads/Yelp-CptS451/yelp_user.JSON', 'r') as f:
+    with open('yelp_user.JSON', 'r') as f:
         line = f.readline()
         count_line = 0
         innerconn = getConn()
@@ -205,7 +205,7 @@ def writeFriends(user_id, friend_id, localconn):
 
 
 def insert2CheckinsTable():
-    with open('/Users/sydneyyeargers/Downloads/Yelp-CptS451/yelp_checkin.JSON', 'r') as f:
+    with open('yelp_checkin.JSON', 'r') as f:
         line = f.readline()
         count_line = 0
         innerconn = getConn()
@@ -240,7 +240,7 @@ def writeCheckins(business_id, hour, day, count, localconn):
 
 
 def insert2ReviewTable():
-    with open('/Users/sydneyyeargers/Downloads/Yelp-CptS451/yelp_review.JSON', 'r') as f:
+    with open('yelp_review.JSON', 'r') as f:
         line = f.readline()
         count_line = 0
         innerconn = getConn()
@@ -342,7 +342,7 @@ class milestone3(QMainWindow):
     def executeQuery(self, sql_str):
         try:
             conn = psycopg2.connect(database="Milestone2DB", user="postgres", host="localhost",
-                                    password="SQL4.Passwordd", port="5432")
+                                    password="", port="5432")
             print('Database successfully connected!')
         except:
             print('Unable to connect to the database!')
