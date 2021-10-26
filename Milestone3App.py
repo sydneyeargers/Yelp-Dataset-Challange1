@@ -21,7 +21,7 @@ def int2BoolStr(value):
 def getConn():
     global conn
     if conn is None:
-        conn = psycopg2.connect(database="Milestone2DB", user="postgres", host="localhost", password="SQL4.Passwordd",
+        conn = psycopg2.connect(database="Milestone2DB", user="postgres", host="localhost", password="",
                                 port="5432")
     return conn
 
